@@ -1,6 +1,5 @@
 import json
 import sys
-from pyquery import PyQuery as pq
 from patrollers.taaze import TaazePatroller
 from patrollers.iread import IReadPatroller
 from patrollers.books import BooksPatroller
