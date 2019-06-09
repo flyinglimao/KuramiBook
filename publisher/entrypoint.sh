@@ -16,7 +16,6 @@ cp static/* dist && \
 echo "Make page" && \
 python make.py && \
 cd dist && \
-ls -al && \
 
 # config git
 echo "Config git" && \
