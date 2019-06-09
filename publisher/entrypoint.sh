@@ -24,7 +24,7 @@ git init && \
 git branch gh-pages && \
 git config --global user.email "${COMMIT_EMAIL}" && \
 git config --global user.name "${COMMIT_NAME}" && \
-REPOSITORY_PATH="https://${GITHUB_TOKEN}@github.com/${GITHUB_REPOSITORY}.git" && \
+REPOSITORY_PATH="https://flyinglimao:${PUSH_TOKEN}@github.com/${GITHUB_REPOSITORY}.git" && \
 
 # publish
 echo "Publish page" && \
