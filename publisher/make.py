@@ -16,4 +16,4 @@ for store in data.keys():
 template = Template(open("template/index.html", "r", encoding="utf-8").read())
 output = template.render(data=digest)
 
-open("static/index.html", "wb").write(output.encode("utf-8"))
+open("dist/index.html", "wb").write(output.encode("utf-8"))
