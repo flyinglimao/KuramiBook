@@ -1,4 +1,5 @@
 import json
+import sys
 from pyquery import PyQuery as pq
 from patrollers.taaze import TaazePatroller
 from patrollers.iread import IReadPatroller
@@ -18,10 +19,13 @@ def json_encode(object):
     return json.dumps(object, cls=JSONEncoder)
 
 patrollers = [TaazePatroller(), IReadPatroller(), CitePatroller(), BooksPatroller(), KingStonePatroller()]
-
-demo = open("demo.json", "w")
 data = {}
 for patroller in patrollers:
     data[patroller.name] = patroller.generate()
 
-demo.write(json_encode(data))
+if len(sys.argv) >= 2:
+    demo = open(sys.argv[1], "w")
+    demo.write(json_encode(data))
+else:
+    print(sys.argv)
+    print(json_encode(data))

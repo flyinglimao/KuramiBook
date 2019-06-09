@@ -11,7 +11,7 @@ class CitePatroller(PatrollerInterface):
         today = pq(dom(".sale-now .pdset-1:nth-child(1)"))
         day = today(".box-title").text()[:9]
         link = "https://www.cite.com.tw/" + today(".photo a").attr("href")
-        image = "https://www.cite.com.tw/" + today(".photo img").attr("src")
+        image = "https:" + today(".photo img").attr("src")
         name = today(".photo img").attr("title")
         price = today(".book > p").text()[-4:-1]
         book = Book(name, link, image, price)

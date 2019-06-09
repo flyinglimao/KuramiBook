@@ -1,0 +1,33 @@
+* {
+    font-family: '微軟正黑體', 'Microsoft JhengHei', '微軟雅黑體', 'Microsoft JhengHei', '思源黑體', 'Noto Sans TC', 'NotoSans', '黑體-繁', 'Heiti TC'
+}
+
+.pure-g>div {
+    margin: 0 auto;
+}
+
+.navbar {
+    border-bottom: 1px solid darkgray;
+    font-size: 1.1em;
+}
+
+.card {
+    text-align: center;
+    margin: 6px;
+    border: 1px solid darkgray;
+    border-radius: 12px;
+    padding: 4px 6px;
+}
+
+.card h4 {
+    margin: 0;
+}
+
+.card img {
+    width: 100%;
+}
+
+a {
+    text-decoration: inherit;
+    color: inherit;
+}

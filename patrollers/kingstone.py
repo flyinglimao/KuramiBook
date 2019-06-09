@@ -11,7 +11,7 @@ class KingStonePatroller(PatrollerInterface):
             discount = pq(discount)
             day = discount(".date_predict66").text()
             link = "https://www.kingstone.com.tw/" + discount(".mainbox2 a").attr("href")
-            image = discount(".mainbox2 img").attr("src")
+            image = discount(".mainbox2 img").attr("data-original")
             name = discount(".mainbox2 h3").text()
             price = discount(".mainbox2 .sale_price:nth-child(2)").text()
             book = Book(name, link, image, price)
