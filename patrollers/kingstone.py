@@ -1,6 +1,6 @@
 from .interface import PatrollerInterface, Book
 from pyquery import PyQuery as pq
-from datetime import datetime
+from datetime import datetime, timedelta
 
 class KingStonePatroller(PatrollerInterface):
     def __init__(self):
@@ -8,7 +8,7 @@ class KingStonePatroller(PatrollerInterface):
 
     def generate(self):
         dom = pq("https://www.kingstone.com.tw/new", headers={"user-agent": "pyquery"})
-        day = datetime.now().strftime("%m/%d(%w)")
+        day = (datetime.now() + timedelta(hours=8)).strftime("%m/%d(%w)")
         day = day[:6] + ['日', '一', '二', '三', '四', '五', '六'][int(day[6])] + day[7:]
         link = "https://www.kingstone.com.tw" + dom(".saleindexunit a").attr("href")
         image = dom(".saleindexunit img").attr("src")
