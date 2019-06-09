@@ -20,8 +20,6 @@ cd dist && \
 # config git
 echo "Config git" && \
 git init && \
-git branch gh-pages && \
-git checkout gh-pages && \
 git config --global user.email "${COMMIT_EMAIL}" && \
 git config --global user.name "${COMMIT_NAME}" && \
 REPOSITORY_PATH="https://flyinglimao:${PUSH_TOKEN}@github.com/${GITHUB_REPOSITORY}.git" && \
@@ -30,5 +28,5 @@ REPOSITORY_PATH="https://flyinglimao:${PUSH_TOKEN}@github.com/${GITHUB_REPOSITOR
 echo "Publish page" && \
 git add . && \
 git commit -m "Auto generate $(date +"%F")" && \
-git push $REPOSITORY_PATH gh-pages && \
+git push $REPOSITORY_PATH master:gh-pages && \
 echo "DONE!!!!"
