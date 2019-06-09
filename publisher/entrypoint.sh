@@ -5,9 +5,9 @@ apt-get update && \
 apt-get install -y git && \
 
 # go directory
-echo "CD to workspace" && \
+echo "CD to workspace $GITHUB_WORKSPACE" && \
 cd $GITHUB_WORKSPACE && \
-
+ls -al && \
 # install dependencies
 echo "Install dependencies" && \
 pip install -r requirements.txt && \
