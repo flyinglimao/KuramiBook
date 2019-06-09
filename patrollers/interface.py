@@ -3,7 +3,7 @@ class Dataset:
         self.data = {}
 
     def set_book(self, day, book):
-        day = day.replace(" ", "")
+        day = day.strip()
         self.data[day] = book
     
     def __jsonencode__(self):
