@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 # install git
 apt-get update && \
 apt-get install -y git && \
