@@ -10,5 +10,4 @@ LABEL "homepage"="https://limaois.me/KuramiBook"
 LABEL "maintainer"="flyinglimao <hi@limaois.me>"
 
 ADD entrypoint.sh /entrypoint.sh
-RUN chmod +x /entrypoint.sh
 ENTRYPOINT [ "sh", "/entrypoint.sh" ]

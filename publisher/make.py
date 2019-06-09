@@ -1,7 +1,7 @@
 from jinja2 import Template
 from json import loads, dumps
 
-data = loads(open("tmp.json", "r").read())
+data = loads(open("data.json", "r").read())
 digest = {}
 
 for store in data.keys():
@@ -16,4 +16,4 @@ for store in data.keys():
 template = Template(open("template/index.html", "r", encoding="utf-8").read())
 output = template.render(data=digest)
 
-open("static/tmp.html", "wb").write(output.encode("utf-8"))
+open("static/index.html", "wb").write(output.encode("utf-8"))
