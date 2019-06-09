@@ -24,7 +24,7 @@ class KingStonePatroller(PatrollerInterface):
             link = "https://www.kingstone.com.tw" + discount(".mainbox2 a").attr("href")
             image = discount(".mainbox2 img").attr("data-original")
             name = discount(".mainbox2 h3").text()
-            price = discount(".mainbox2 .sale_price:nth-child(2)").text()
+            price = discount(".mainbox2 .sale_price:nth-child(3)").text()
             book = Book(name, link, image, price)
             self.dataset.set_book(day, book)
         return self.dataset
