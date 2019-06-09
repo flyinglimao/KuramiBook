@@ -21,6 +21,7 @@ cd dist && \
 echo "Config git" && \
 git init && \
 git branch gh-pages && \
+git checkout gh-pages && \
 git config --global user.email "${COMMIT_EMAIL}" && \
 git config --global user.name "${COMMIT_NAME}" && \
 REPOSITORY_PATH="https://flyinglimao:${PUSH_TOKEN}@github.com/${GITHUB_REPOSITORY}.git" && \
