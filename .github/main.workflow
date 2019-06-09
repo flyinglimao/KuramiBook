@@ -9,5 +9,5 @@ action "./publisher/" {
     COMMIT_EMAIL = "hi@limaois.me"
     COMMIT_NAME = "flyinglimao"
   }
-  secrets = ["GITHUB_TOKEN"]
+  secrets = ["PUSH_TOKEN"]
 }
