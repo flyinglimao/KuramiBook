@@ -11,4 +11,4 @@ LABEL "maintainer"="flyinglimao <hi@limaois.me>"
 
 ADD entrypoint.sh /entrypoint.sh
 RUN chmod +x /entrypoint.sh
-RUN sh /entrypoint.sh
+ENTRYPOINT [ "/entrypoint.sh" ]
