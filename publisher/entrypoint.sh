@@ -2,7 +2,9 @@
 # install git
 echo "Install git" && \
 apt-get update && \
-apt-get install -y git && \
+apt-get install -y git curl && \
+
+curl https://www.taaze.tw/act66.html && \
 
 # go directory
 echo "CD to workspace $GITHUB_WORKSPACE" && \
