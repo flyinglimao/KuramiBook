@@ -1,6 +1,6 @@
 workflow "Publisher" {
-  on = "schedule(0 9 * * 1)"
   resolves = ["./publisher/"]
+  on = "push"
 }
 
 action "./publisher/" {
