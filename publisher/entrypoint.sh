@@ -28,5 +28,5 @@ REPOSITORY_PATH="https://flyinglimao:${PUSH_TOKEN}@github.com/${GITHUB_REPOSITOR
 echo "Publish page" && \
 git add . && \
 git commit -m "Auto generate $(date +"%F")" && \
-git push $REPOSITORY_PATH master:gh-pages && \
+git push -f $REPOSITORY_PATH master:gh-pages && \
 echo "DONE!!!!"
