@@ -10,7 +10,7 @@ class CitePatroller(PatrollerInterface):
         # 取得當日
         today = pq(dom(".sale-now .pdset-1:nth-child(1)"))
         day = today(".box-title").text()[:9]
-        link = "https://www.cite.com.tw/" + today(".photo a").attr("href")
+        link = "https://www.cite.com.tw" + today(".photo a").attr("href")
         image = "https:" + today(".photo img").attr("src")
         name = today(".photo img").attr("title")
         price = today(".book > p").text()[-4:-1]
@@ -21,7 +21,7 @@ class CitePatroller(PatrollerInterface):
         for discount in discounts_root(".item"):
             discount = pq(discount)
             day = discount(".date").text()
-            link = "https://www.cite.com.tw/" + discount(".photo a").attr("href")
+            link = "https://www.cite.com.tw" + discount(".photo a").attr("href")
             image = "https:" + discount(".photo img").attr("src")
             name = discount(".photo img").attr("title")
             price = discount(".price").text()[-4:-1]
